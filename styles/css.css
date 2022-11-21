@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Dancing Script', cursive;
+    background-color: deeppink;
+    color: #000000
+}
+
+.body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns:repeat(12, 1fr);
+    grid-template-rows:repeat(12, 1fr);
+}
+
+.NavBar{
+    background-color: #B01E68;
+    grid-column: 1 / span 12;
+    grid-row: 1 / span 1;
+}
+
+.Footer{
+    background-color:  #B01E68;
+    grid-column: 1 / span 12;
+    grid-row: 12 / span 1;
+}
+
+.LeftSideMenu{
+    background-color:  #B01E68;
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 10;
+}
+.RightSideMenu{
+    background-color:  #B01E68;
+    grid-column: 11 / span 2;
+    grid-row: 2 / span 10;
+}
+.PageContent{
+    background-color:  #B01E68;
+    grid-column: 3 / span 8;
+    grid-row: 2 / span 10;
+}
+
+.NavBar{
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.PagesList ul{
+    display: flex;
+    gap: 20px;
+    list-style: noneb;
+    padding-right: 10px;
+
+}
+.Brand{
+    padding-left: 10px;
+}
+/* main page body style */
+
+.PageContent{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+.PageContent{
+
+    background: radial-gradient(circle at top, #FFE15D, #DC3535, #B01E68, transparent),
+    radial-gradient(circle at bottom, #DEBACE, #FEBE8C, #F49D1A, transparent);
+    background-size: 400% 400%;
+    animation: AnimatedBG 12s ease-in-out infinite;
+}
+
+@-webkit-keyframes AnimatedBG {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0 50%;
+    }}
